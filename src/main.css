@@ -1,21 +1,47 @@
 .one {
+  position: relative;
   background: #e9f0f8;
-  height: 100vh;
+  height    : 100vh;
+  text-align: center;
+  z-index: 0;
+}
+
+.brandOne {
+  position : fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
 }
 
 .two {
-  height: 50vh;
+  position:relative;
+  height    : 50vh;
   background: #4a90e2;
+  z-index: 4;
 }
 
-
 .three {
-  background: url(~!file!../assets/parallax.jpg);
-  background-attachment:fixed;
-  height: 100vh;
+  position:relative;
+  background           : url(~!file!../assets/parallax.jpg) no-repeat ;
+  background-attachment: fixed;
+  height               : 100vh;
+  background-size:100% auto;
+  z-index: 5;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .four {
-  height: 30vh;
+  height    : 10vh;
   background: #4a90e2;
+  text-align: center;
+}
+
+.brandTwo {
+  position : relative;
+  top      : 50%;
+  transform: translate(0, -50%);
 }
