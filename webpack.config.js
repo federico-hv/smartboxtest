@@ -37,7 +37,8 @@ module.exports = {
             'file?hash=sha512&digest=hex&name=[hash].[ext]',
             'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
         ]
-    }
+      },
+      { test: /\.jpg$/,    loader: "url-loader?limit=10000&minetype=image/jpg" }
     ]
   }
 };

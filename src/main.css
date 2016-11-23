@@ -1,4 +1,21 @@
+.one {
+  background: #e9f0f8;
+  height: 100vh;
+}
 
-.container {
-  width: 950px;
+.two {
+  height: 50vh;
+  background: #4a90e2;
+}
+
+
+.three {
+  background: url(~!file!../assets/parallax.jpg);
+  background-attachment:fixed;
+  height: 100vh;
+}
+
+.four {
+  height: 30vh;
+  background: #4a90e2;
 }
