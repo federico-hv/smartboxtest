@@ -7,6 +7,7 @@ export default class App extends Component {
   render() {
     return (
       <main>
+
           <section>
             <div className="one">
               <div className="brandOne">
@@ -20,24 +21,34 @@ export default class App extends Component {
 
           <section>
             <div className="two">
-              <div className="container">
-                <div className="col-sm-10 col-sm-offset-1">
+              <div className="container linksContainer">
+
+                <div className="col-xs-10 col-xs-offset-1">
                   <div className="row">
-                    Nuestras apps
+                    <div className="col-xs-10 col-xs-offset-1 col-sm-offset-0 noPadding">
+                      <span className="ourApps">Nuestras Apps</span>
+                    </div>
                   </div>
                   <br></br>
                   <div className="row">
-                    <div className="col-sm-4">
-                      <img src={require('../assets/kunga.png')} style={{width:'90%'}}/>
+                    <div className="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0 col-md-4 linkBox">
+                        <img className="img-fluid center-block img-width" src={require('../assets/kunga.png')}/>
+                        <div className="linkBoxTitle">
+                          KUNGA . Actitud Animal
+                        </div>
                     </div>
-                    <div className="col-sm-4">
-                      <img src={require('../assets/foto-middle.png')} style={{marginLeft:'20%',width:'60%', borderRadius: '90px'}}/>
+                    <div className="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0 col-md-4">
+                      <img className="center-block img-circle img-circ-width" src={require('../assets/foto-middle.png')}/>
                     </div>
-                    <div className="col-sm-4">
-                      <img src={require('../assets/directtv.png')} style={{width:'90%'}}/>
+                    <div className="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0 col-md-4 linkBox">
+                      <img className="img-reponsive center-block img-width" src={require('../assets/directtv.png')}/>
+                        <div className="linkBoxTitle">
+                          DirectTv. TV Interactive
+                        </div>
                     </div>
                   </div>
                 </div>
+
               </div>
             </div>
           </section>

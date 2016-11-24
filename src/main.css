@@ -1,37 +1,74 @@
+
+.container {
+  max-width: 950px;
+}
+
+
 .one {
-  position: relative;
+  position  : relative;
   background: #e9f0f8;
   height    : 100vh;
   text-align: center;
-  z-index: 0;
+  z-index   : 0;
 }
 
 .brandOne {
   position : fixed;
-  left: 50%;
-  top: 50%;
+  left     : 50%;
+  top      : 50%;
   transform: translate(-50%, -50%);
-  z-index: 1;
+  z-index  : 1;
 }
 
 .two {
-  position:relative;
-  height    : 50vh;
+  position  : relative;
   background: #4a90e2;
-  z-index: 4;
+  z-index   : 4;
 }
 
+.linksContainer {
+  position : relative;
+}
+
+.noPadding {
+  padding: 0px;
+}
+
+.linkBox {
+  padding: 0px;
+  cursor : pointer;
+}
+
+.linkBoxTitle {
+  position    : absolute;
+  opacity     : 0.8;
+  padding-left: 3%;
+  width       : 100%;
+  line-height : 240%;
+  background  : white;
+  color       : #4b4b4b;
+  zIndex      : 10;
+  bottom      : 0px;
+}
+
+.ourApps {
+  color: white;
+  font-size: 180%;
+  font-weight: 100;
+}
+
+
 .three {
-  position:relative;
-  background           : url(~!file!../assets/parallax.jpg) no-repeat ;
-  background-attachment: fixed;
-  height               : 100vh;
-  background-size:100% auto;
-  z-index: 5;
+  position               : relative;
+  background             : url(~!file!../assets/parallax.jpg) no-repeat ;
+  background-attachment  : fixed;
+  height                 : 100vh;
+  background-size        : 100% auto;
+  z-index                : 5;
   -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  -moz-background-size   : cover;
+  -o-background-size     : cover;
+  background-size        : cover;
 }
 
 .four {
@@ -44,4 +81,41 @@
   position : relative;
   top      : 50%;
   transform: translate(0, -50%);
+}
+
+.img-width {
+  width: 100%;
+}
+
+.img-circ-width {
+  width: 66%;
+}
+
+@media screen and (min-width:768px){
+  .two {
+    height: 50vh;
+  }
+
+  .linksContainer {
+    top      : 50%;
+    transform: translate(0%, -50%);
+  }
+}
+
+
+@media screen and (max-width:767px){
+  [class*="col-"]{
+    margin-bottom: 30px;
+  }
+
+  .two {
+    background: red;
+    padding-top: 10%;
+  }
+  
+  .three {
+    background: url(~!file!../assets/parallax.jpg) 73% 0;
+    background-attachment  : fixed;
+  }
+
 }

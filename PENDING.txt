@@ -1,0 +1,8 @@
+
+- Add modals
+
+- Change font-family to roboto and width (maybe use label or paragraph)
+
+- Add the parallax background
+
+- State? LightBox with ajax form?
