@@ -1,7 +1,5 @@
 
-- Change font-family to roboto and width (maybe use label or paragraph)
-
-- Add the parallax background
+- Fix styles for mobile
 
 - Add Redux stuff. Define state tree, reducers and actions.
 
@@ -10,6 +8,7 @@
 - Create service or fake api to check ajax calls.
 
 - Define how to show error message to the user.
+
 
 
 
@@ -25,3 +24,9 @@ Things I still don't get
 - LightBox or Modal for images in the middle?
 
 - Show form with every image?
+
+
+
+
+
+// brew install libpng issue!!!!!! for webpack to load jpg files

@@ -1,5 +1,10 @@
-body {
 
+
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #e9f0f8;
 }
 
 
@@ -17,12 +22,14 @@ body {
 }
 
 .brandOne {
-  position : fixed;
+  position : relative;
   left     : 50%;
   top      : 50%;
   transform: translate(-50%, -50%);
   z-index  : 1;
   color    : #707375;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 
@@ -65,16 +72,10 @@ body {
 
 .three {
   position               : relative;
-  background             : url(~!file!../assets/parallax.jpg) no-repeat ;
-  background-attachment  : fixed;
+  background             : url(../assets/parallax.jpg) no-repeat ;
   height                 : 100vh;
-  background-size        : 100% auto;
-  z-index                : 5;
-  -webkit-background-size: cover;
-  -moz-background-size   : cover;
-  -o-background-size     : cover;
-  background-size        : cover;
 }
+
 
 .four {
   height    : 10vh;
@@ -201,7 +202,6 @@ body {
 
   .three {
     background: url(~!file!../assets/parallax.jpg) 73% 0;
-    background-attachment  : fixed;
   }
 
 }
