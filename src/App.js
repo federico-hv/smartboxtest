@@ -1,5 +1,4 @@
 import './main.css';
-//import './main.scss';
 import React, { Component } from 'react';
 
 
@@ -20,7 +19,7 @@ export default class App extends Component {
       form: val
     });
 
-    const {fadebox, overboxOne, overboxTwo } = this.refs;
+    const { fadebox, overboxOne, overboxTwo } = this.refs;
 
     setTimeout(()=>{
       if(this.state.showLightBox){
@@ -91,7 +90,7 @@ export default class App extends Component {
                   <br></br>
                   <div className="row">
                     <div onClick={this.toggleLightBox.bind(this, 1)} className="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0 col-md-4 linkBox">
-                        <img className="img-fluid center-block img-width" src={require('../assets/kunga.png')}/>
+                        <img className="img-fluid rounded img-rounded center-block img-width" src={require('../assets/kunga.png')}/>
                         <div className="linkBoxTitle">
                           KUNGA . Actitud Animal
                         </div>
@@ -100,7 +99,7 @@ export default class App extends Component {
                       <img className="center-block img-circle img-circ-width" src={require('../assets/foto-middle.png')}/>
                     </div>
                     <div onClick={this.toggleLightBox.bind(this, 2)} className="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0 col-md-4 linkBox">
-                      <img className="img-reponsive center-block img-width" src={require('../assets/directtv.png')}/>
+                      <img className="img-reponsive img-rounded center-block img-width" src={require('../assets/directtv.png')}/>
                         <div className="linkBoxTitle">
                           DirectTv. TV Interactive
                         </div>
