@@ -1,6 +1,4 @@
 
-- Fix styles for mobile
-
 - Add Redux stuff. Define state tree, reducers and actions.
 
 - Tests
