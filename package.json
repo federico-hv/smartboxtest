@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "Coding test for smartbox tv",
   "scripts": {
-    "start": "npm run build && node app.js",
-    "start-dev": "node devServer.js",
+    "start": "npm run build && node server.js",
+    "dev": "node server.js",
+    "build": "webpack -p",
     "lint": "eslint src"
   },
   "repository": {
