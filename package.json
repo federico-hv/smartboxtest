@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Coding test for smartbox tv",
   "scripts": {
-    "start": "node server.js",
+    "start": "npm run build && node app.js",
+    "start-dev": "node devServer.js",
     "lint": "eslint src"
   },
   "repository": {
@@ -45,6 +46,7 @@
   },
   "dependencies": {
     "axios": "^0.15.3",
+    "qs": "^6.3.0",
     "react": "^0.14.6",
     "react-dom": "^0.14.6",
     "react-parallax": "^1.1.0"

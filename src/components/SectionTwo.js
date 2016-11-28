@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import qs from 'qs';
 
 
 export default class SectionTwo extends Component {
@@ -81,13 +82,10 @@ export default class SectionTwo extends Component {
     const user = this.refs[`username${val}`].value;
     const pass = this.refs[`password${val}`].value;
     const url = 'http://test-web.nunchee.com/nunchee/api/1.0/users/login_frontend';
-    const params = new URLSearchParams();
-    params.append('username', user);
-    params.append('password', pass);
+    const params = { username: user, password: pass };
 
-    axios.post(url, params)
+    axios.post(url, qs.stringify(params))
       .then((res)=>{
-        console.log('RES: ', res);
         if(res.status !== 200) throw new Error(res);
 
         this.setState({
@@ -114,7 +112,6 @@ export default class SectionTwo extends Component {
   }
 
   render(){
-
     const {
       overbox,
       response
@@ -155,7 +152,7 @@ export default class SectionTwo extends Component {
           </div>
 
           <div ref="overboxFour" className="overbox loader obVisible" style={overbox === 4 ? { display: 'block'} : null}>
-            <img className="img-fluid center-block img-width" src={require('../../assets/ellipsis.svg')} style={{height: '100%'}}/>
+            <img className="img-fluid center-block img-width" src={require('../../assets/ellipsis.gif')} style={{height: '100%'}}/>
           </div>
 
           {/* Modal */}
@@ -163,8 +160,7 @@ export default class SectionTwo extends Component {
             <div className="modal-dialog" role="document">
               <div className="modal-content">
                 <div className="modal-header">
-                  <button type="button" className="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                  <h4 className="modal-title">Status: {response.status}</h4>
+                  <h3 className="modal-title">Status: {response.status}</h3>
                 </div>
                 <div className="modal-body">
                   <p>Message: {response.message}</p>
@@ -175,7 +171,6 @@ export default class SectionTwo extends Component {
               </div>
             </div>
           </div>
-
 
           <div ref="fadebox" onClick={this.toggleLightBox.bind(this, 0)} className="fadebox" style={overbox !== 0 ? { display: 'block'} : null}></div>
         </div>
