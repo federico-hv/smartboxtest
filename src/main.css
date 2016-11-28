@@ -138,8 +138,21 @@ body {
   z-index   : 1002;
   border    : solid 3px #CCCCCC;
   border-radius: 5px;
+  -webkit-transition: opacity 0.4s; /* Safari */
+  transition: opacity 0.4s;
+}
+
+.loader {
+  top    : 25% !important;
+  height : 40% !important;
+  border : none;
+}
+
+.modal {
+  opacity           : 0;
+  top               : 25%;
   -webkit-transition: opacity 0.6s; /* Safari */
-  transition: opacity 0.6s;
+  transition        : opacity 0.6s;
 }
 
 

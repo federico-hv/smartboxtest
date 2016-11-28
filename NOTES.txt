@@ -1,6 +1,4 @@
 
-- Add Redux stuff. Define state tree, reducers and actions.
-
 - Tests
 
 - Create service or fake api to check ajax calls.
@@ -8,22 +6,6 @@
 - Define how to show error message to the user. Modal?
 
 - README file
-
-
-
-
-Things I still don't get
-
-
-- 12 columns and 10 gutter?
-
-- No specification of which variant of Roboto font to use
-
-- LightBox or Modal for images in the middle?
-
-- Show form with every image?
-
-
 
 
 
