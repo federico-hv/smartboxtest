@@ -1,8 +1,10 @@
 var path = require('path');
 var webpack = require('webpack');
+var merge = require('webpack-merge');
 
-module.exports = {
-  devtool: 'eval',
+const TARGET = process.env.npm_lifecycle_event;
+
+const common = {
   entry: [
     'webpack-hot-middleware/client',
     './src/index'
@@ -12,16 +14,8 @@ module.exports = {
     filename: 'bundle.js',
     publicPath: '/assets/'
   },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin()
-  ],
   module: {
     loaders: [
-      {
-        test: /\.js$/,
-        loaders: ['react-hot', 'babel'],
-        include: path.join(__dirname, 'src')
-      },
       {
         test   : /\.css$/,
         loaders: ['style', 'css'],
@@ -37,3 +31,54 @@ module.exports = {
     ]
   }
 };
+
+
+if(TARGET === 'dev' || !TARGET){
+  module.exports = merge(common, {
+    plugins: [
+      new webpack.HotModuleReplacementPlugin()
+    ],
+    devtool: 'eval',
+    module: {
+      loaders: [
+        {
+          exclude: /(node_modules)/,
+          test: /\.js$/,
+          loaders: ['react-hot', 'babel'],
+          include: path.join(__dirname, 'src')
+        },
+      ]
+    }
+  });
+}
+
+if(TARGET === 'build') {
+  module.exports = merge(common, {
+    entry: path.join(__dirname, 'src'),
+    "resolve": {
+      extensions: ['', '.js'],
+      "alias": {
+        "react": "preact-compat",
+        "react-dom": "preact-compat"
+      }
+    },
+    plugins: [
+      new webpack.DefinePlugin({
+        'process.env': {
+          // This has effect on the react lib size
+          'NODE_ENV': JSON.stringify('production'),
+        },
+      })
+    ],
+    module: {
+      loaders: [
+        {
+          exclude: /(node_modules)/,
+          test   : /\.js?$/,
+          loaders: ['babel'],
+          include: path.join(__dirname, 'src')
+        }
+      ]
+    }
+  });
+}
