@@ -4,9 +4,9 @@
   "description": "Coding test for smartbox tv",
   "scripts": {
     "start": "npm run build && node server.js",
-    "dev"  : "node server.js",
+    "dev": "node server.js",
     "build": "webpack -p",
-    "lint" : "eslint src"
+    "lint": "eslint src"
   },
   "repository": {
     "type": "git",

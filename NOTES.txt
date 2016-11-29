@@ -1,8 +1,0 @@
-
-- Tests
-
-- README file
-
-
-
-// brew install libpng issue!!!!!! for webpack to load jpg files
