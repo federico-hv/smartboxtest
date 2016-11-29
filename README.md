@@ -31,7 +31,7 @@ As the document sent by the company stated all the sections needed, the componen
 Clone the repo
 
 ```sh
-$ git clone
+$ git clone https://github.com/federicous/smartboxtest.git
 ```
 
 Install dependencies
