@@ -37,7 +37,7 @@ $ git clone https://github.com/federicous/smartboxtest.git
 Install dependencies
 
 ```sh
-$ cd smartbox
+$ cd smartboxtest
 $ npm install
 ```
 This will install every package listed in package.json file
