@@ -1,10 +1,6 @@
 
 - Tests
 
-- Create service or fake api to check ajax calls.
-
-- Define how to show error message to the user. Modal?
-
 - README file
 
 

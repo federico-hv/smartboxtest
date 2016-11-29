@@ -1,7 +1,4 @@
 
-
-
-
 body {
   font-family: 'Roboto', sans-serif;
   background: #e9f0f8;
@@ -74,6 +71,10 @@ body {
   position               : relative;
   background             : url(../assets/parallax.jpg) no-repeat ;
   height                 : 100vh;
+  -webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
 }
 
 
@@ -131,7 +132,8 @@ body {
   background: #FFFFFF;
   top       : 5%;
   width     : 70%;
-  max-width : 260px;
+  max-width : 280px;
+  max-height: 500px;
   left      : 50%;
   transform: translate(-50%, 0);
   height    : 65%;
@@ -186,6 +188,7 @@ body {
 }
 
 /* Media queries */
+
 
 @media screen and (min-width:768px){
   .two {

@@ -5,23 +5,24 @@ import SectionTwo from './SectionTwo';
 import SectionThree from './SectionThree';
 import Footer from './Footer';
 
-
-const App = ()=>(
-  <main>
-    <section>
-      <SectionOne />
-    </section>
-    <section>
-      <SectionTwo />
-    </section>
-    <section>
-        <SectionThree />
-    </section>
-    <footer>
-        <Footer />
-    </footer>
-  </main>
-);
-
-
-export default App;
+/* Kept App Component as a class to avoid problems with react-hot-loader */
+export default class App extends Component {
+  render(){
+    return(
+      <main>
+        <section>
+          <SectionOne />
+        </section>
+        <section>
+          <SectionTwo />
+        </section>
+        <section>
+            <SectionThree />
+        </section>
+        <footer>
+            <Footer />
+        </footer>
+      </main>
+    );
+  }
+}

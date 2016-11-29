@@ -4,13 +4,14 @@ var merge = require('webpack-merge');
 
 const TARGET = process.env.npm_lifecycle_event;
 
+
 const common = {
   entry: [
     'webpack-hot-middleware/client',
     './src/index'
   ],
   output: {
-    path: path.join(__dirname, 'public/assets'),
+    path: path.join(__dirname, 'static/assets'),
     filename: 'bundle.js',
     publicPath: '/assets/'
   },
@@ -38,7 +39,7 @@ if(TARGET === 'dev' || !TARGET){
     plugins: [
       new webpack.HotModuleReplacementPlugin()
     ],
-    devtool: 'eval',
+    devtool: 'cheap-module-eval-source-map',
     module: {
       loaders: [
         {
@@ -52,7 +53,13 @@ if(TARGET === 'dev' || !TARGET){
   });
 }
 
-if(TARGET === 'build') {
+
+
+
+
+
+
+if(TARGET === 'start' || TARGET === 'build') {
   module.exports = merge(common, {
     entry: path.join(__dirname, 'src'),
     "resolve": {
