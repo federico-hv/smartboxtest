@@ -1,6 +1,7 @@
-# SmartBox Test
+SmartBox Test
+=============
 
-Frontend dev technical interview project.
+*Frontend dev technical interview project.*
 
 
 This mini application was built using ES6, [React](https://facebook.github.io/react/) as UI library for development, [Preact](https://preactjs.com/) to minimize script size in production and [Webpack](https://webpack.github.io/) as module bundler.  
@@ -11,7 +12,7 @@ To create the parallax scroll effect I used [react-parallax](https://github.com/
 
 
 
-### Components
+## Components
 
 The app was not big enough to use a flux implementation for state management so I decided to leave all the logic inside a class based component and separate the rest of the pieces into stateless functional components.
 
@@ -25,7 +26,7 @@ As the document sent by the company stated all the sections needed, the componen
 
 
 
-### Installation
+## Installation
 
 
 Clone the repo
@@ -49,7 +50,7 @@ Run development:
 $ npm run dev
 ```
 
-Webpack's configuration file and express server will recognize the dev environment through the `process.env.npm_lifecycle_event` variable and the files will be served from memorysssssss.
+Webpack's configuration file and express server will recognize the dev environment through the `process.env.npm_lifecycle_event` variable and the files will be served from memory.
 
 
 Run Production:
